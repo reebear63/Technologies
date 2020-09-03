@@ -1,12 +1,18 @@
 # Basics of Python Scripting Language #
 
+## used material for this write-up ##
+- Wikipedia
+- Michael Driscoll: Python 101, 1st Edition, 2nd Edition
+- Michael Driscoll: Python 201
+- 
+  
 ## Introduction ##
-
-### History ###
 - Python is a simple, easy to learn, powerful, high-level and object-oriented programming language
 - dynamic typing
 - multipurpose programming language
 - can easily integrate with C, C++, Java, etc.
+
+### History ###
 - started by Guido van Rossum at CWI in the Netherlands (CWI = Centrum Wiskunde & Informatica)
 - predecessor: ABC programming language, capable of exception handling, interfacing with the Amoeba Operating System
 - influenced by: ABC and Modula-3
@@ -22,6 +28,10 @@ The language had a major influence on the design of the Python programming langu
 **Minix**
 Andrew S. Tanenbaum created MINIX at Vrije Universiteit in Amsterdam to exemplify the principles conveyed in his textbook, "Operating Systems: Design and Implementation" (1987). Early versions of Minix were created by Tanenbaum for educational purposes. Starting with MINIX 3, the primary aim of development shifted from education to the creation of a highly reliable and self-healing microkernel OS. Minix is now developed as open-source software.
 Linus Torvalds used and appreciated Minix, but his design deviated from the Minix architecture in significant ways, most notably by employing a monolithic kernel instead of a microkernel. This was disapproved of by Tanenbaum in the "Tanenbaum-Torvalds debate". Tanenbaum explained again his rational for using a microkernel in May 2006.
+
+**Modula-3**
+Modula-3 is a programming language conceived as a successor to an upgraded version of Modula-2 known as Modula-2+. While it has been influential in research circles (influencing the designs of languages such as Java, C#, and Python), it has not been adopted widely in the industry.
+Modula-3's main features are simplicity and safety while preserving the power of a systems-programming language. Modula-3 aimed to continue the Pascal tradition of type safety, while introducing new constructs for practical real-world programming.
 
 ### Variables ###
 - Variable is the name of a memory location where data is stored.

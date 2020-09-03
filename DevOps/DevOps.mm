@@ -1,0 +1,100 @@
+<map version="1.0.1">
+<!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
+<node CREATED="1575782472291" ID="ID_301553373" MODIFIED="1578911509134" TEXT="DevOps">
+<node CREATED="1575808481582" ID="ID_1446340818" MODIFIED="1575808489553" POSITION="left" TEXT="Read this book ">
+<icon BUILTIN="yes"/>
+</node>
+<node CREATED="1575783633491" FOLDED="true" ID="ID_1743528268" MODIFIED="1578906925522" POSITION="left" TEXT="What is DevOps?">
+<node CREATED="1575783902286" ID="ID_679699643" MODIFIED="1575783912269" TEXT="Automation of Development"/>
+<node CREATED="1575783962954" ID="ID_87865881" MODIFIED="1575784012805" TEXT="Benefits">
+<node CREATED="1575784017324" ID="ID_179884322" MODIFIED="1575784033157" TEXT="Repeatable, Reliable, and Predictable"/>
+<node CREATED="1575784034212" ID="ID_1997511530" MODIFIED="1575784043893" TEXT="Higher ROI in Software"/>
+<node CREATED="1575784048289" ID="ID_1752438680" MODIFIED="1575784067381" TEXT="Code gets deployed during Business Hours"/>
+<node CREATED="1575784068338" ID="ID_1149149592" MODIFIED="1575784078501" TEXT="Releases become Routine"/>
+<node CREATED="1575784082961" ID="ID_114409587" MODIFIED="1575784091405" TEXT="Culture of Trust and Collaboration"/>
+</node>
+</node>
+<node CREATED="1575784361426" FOLDED="true" ID="ID_1452202769" MODIFIED="1578906928274" POSITION="left" TEXT="Key Take-aways">
+<icon BUILTIN="info"/>
+<node CREATED="1575783644675" ID="ID_932614640" MODIFIED="1575783925671" TEXT="DevOps = Development + Operations">
+<icon BUILTIN="idea"/>
+</node>
+<node CREATED="1575784106634" HGAP="38" ID="ID_726457113" MODIFIED="1575784348371" TEXT="Break down silos between Dev and Ops" VSHIFT="32"/>
+<node CREATED="1575784649163" ID="ID_628851618" MODIFIED="1575784654172" TEXT="Deployment Pipelines"/>
+<node CREATED="1575784657595" ID="ID_461158147" MODIFIED="1575786604912" TEXT="Automate Everything">
+<icon BUILTIN="yes"/>
+<node CREATED="1575784729155" ID="ID_1203304369" MODIFIED="1575784736436" TEXT="Infrastructure as Code">
+<node CREATED="1578698940924" ID="ID_1748167768" MODIFIED="1578698956676" TEXT="makes Infrastructure">
+<node CREATED="1578698958344" ID="ID_1764914430" MODIFIED="1578698962915" TEXT="reproducible"/>
+<node CREATED="1578698964616" ID="ID_848413737" MODIFIED="1578698970420" TEXT="easy to set up"/>
+<node CREATED="1578698971857" ID="ID_133565767" MODIFIED="1578698978003" TEXT="fast to set up"/>
+<node CREATED="1578698989776" ID="ID_652124235" MODIFIED="1578698995684" TEXT="set up automatically"/>
+</node>
+</node>
+<node CREATED="1575784829651" ID="ID_549034653" MODIFIED="1575788585757" TEXT="Tests as Code">
+<node CREATED="1575784871130" ID="ID_498476474" MODIFIED="1575784888851" TEXT="Testing is part of the Definition of Done"/>
+</node>
+<node CREATED="1575788587122" ID="ID_1952293322" MODIFIED="1575788592701" TEXT="Pipeline as Code"/>
+<node CREATED="1575788569843" ID="ID_313719644" MODIFIED="1575788579480" TEXT="Configuration as Code"/>
+</node>
+</node>
+<node CREATED="1575785003856" FOLDED="true" ID="ID_363354234" MODIFIED="1578906916722" POSITION="left" TEXT="Buzzwords">
+<node CREATED="1575785025939" ID="ID_612663106" MODIFIED="1575785033155" TEXT="Release Patterns">
+<node CREATED="1575785035675" ID="ID_1934848301" MODIFIED="1575785042891" TEXT="Blue-green Deployments"/>
+<node CREATED="1575785043809" ID="ID_574332987" MODIFIED="1575785048307" TEXT="Canary Releases"/>
+<node CREATED="1575785049576" ID="ID_1246998281" MODIFIED="1575785056435" TEXT="Cluster-Immune Systems"/>
+<node CREATED="1575785072146" ID="ID_698313302" MODIFIED="1575785114747" TEXT="New code is deployed into a non-live environment first, release is performed moving traffic to this environment"/>
+</node>
+</node>
+<node CREATED="1578911515082" ID="ID_1085287807" MODIFIED="1578911522489" POSITION="right" TEXT="Gene Kim">
+<node CREATED="1575783173277" ID="ID_347078539" MODIFIED="1578931239169" TEXT="The Phoenix Project">
+<node CREATED="1575808286033" ID="ID_1811177840" MODIFIED="1575808307177" TEXT="Four Types of IT work">
+<node CREATED="1575808313590" ID="ID_1560092912" MODIFIED="1575808320817" TEXT="Business Projects">
+<node CREATED="1575808520136" ID="ID_1844907375" MODIFIED="1575808534104" TEXT="Business Initiatives, most of the development work"/>
+</node>
+<node CREATED="1575808322246" ID="ID_1580157420" MODIFIED="1575808327729" TEXT="Internal Projects">
+<node CREATED="1575808542120" ID="ID_214740281" MODIFIED="1575808553536" TEXT="Infrastructure &amp; IT Operations"/>
+</node>
+<node CREATED="1575808328814" ID="ID_1167081234" MODIFIED="1575808333433" TEXT="Operational Change">
+<node CREATED="1575808557806" ID="ID_809469527" MODIFIED="1575808562592" TEXT="Updates and Changes"/>
+</node>
+<node CREATED="1575808337477" ID="ID_761549829" MODIFIED="1575808443150" TEXT="Unplanned Work">
+<node CREATED="1575808567559" ID="ID_388805180" MODIFIED="1575808579145" TEXT="Incidents and problems generated by other work"/>
+</node>
+</node>
+</node>
+<node CREATED="1575782488125" ID="ID_1625369713" LINK="https://itrevolution.com/book/the-devops-handbook/" MODIFIED="1578931253596" TEXT="The DevOps Handbook">
+<node CREATED="1578704599898" ID="ID_279289307" LINK="https://itrevolution.com/the-three-ways-principles-underpinning-devops/" MODIFIED="1578705069861" TEXT="The Three Ways">
+<node CREATED="1578704632673" FOLDED="true" ID="ID_1643411875" MODIFIED="1578704932136" TEXT="The First Way: Systems Thinking">
+<node CREATED="1578704649604" ID="ID_600946745" MODIFIED="1578704665851" TEXT="emphasizes the performance of the entire system, not only a silo"/>
+<node CREATED="1578704679137" ID="ID_1728438332" MODIFIED="1578704688315" TEXT="never pass a known defect downstream"/>
+</node>
+<node CREATED="1578704705288" FOLDED="true" ID="ID_307757349" MODIFIED="1578704931348" TEXT="The Second Way: Amplify Feedback Loops">
+<node CREATED="1578704727329" ID="ID_223073289" MODIFIED="1578704747299" TEXT="Goal: to shorten and amplify all feedback loops"/>
+<node CREATED="1578704749026" ID="ID_502570507" MODIFIED="1578704760580" TEXT="embed knowledge where it is needed"/>
+</node>
+<node CREATED="1578704764442" FOLDED="true" ID="ID_1160570461" MODIFIED="1578704929555" TEXT="The Third Way: Culture of Continual Experimentation And Learning">
+<node CREATED="1578704791232" FOLDED="true" ID="ID_122638061" MODIFIED="1578704927481" TEXT="Continual Experimentation">
+<node CREATED="1578704864082" ID="ID_1423723802" MODIFIED="1578704880011" TEXT="Allocate time for improvement of daily work"/>
+</node>
+<node CREATED="1578704803328" FOLDED="true" ID="ID_915682810" MODIFIED="1578704926128" TEXT="Take Risks and Learn from Failure">
+<node CREATED="1578704884399" ID="ID_761803025" MODIFIED="1578704900499" TEXT="Creating rituals that reward team for taking risks"/>
+</node>
+<node CREATED="1578704820032" FOLDED="true" ID="ID_1662424524" MODIFIED="1578704924813" TEXT="Understand that Repetition and Practice is the Prerequisite to Mastery">
+<node CREATED="1578704906049" ID="ID_749444763" MODIFIED="1578704922123" TEXT="Introduce Faults into the system to increase resilience"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1575783182062" ID="ID_1125676018" LINK="https://itrevolution.com/book/the-unicorn-project/" MODIFIED="1578931268074" TEXT="The Unicorn Project">
+<node CREATED="1578704615381" ID="ID_1161359441" MODIFIED="1578704620292" TEXT="The Five Ideals">
+<node CREATED="1575783239916" ID="ID_1541618761" MODIFIED="1575783282231" TEXT="First Ideal: Locality and Simplicity"/>
+<node CREATED="1575783290116" ID="ID_1561867926" MODIFIED="1575783301894" TEXT="Second Ideal: Focus, Flow, and Joy"/>
+<node CREATED="1575783302364" ID="ID_1364832073" MODIFIED="1575783313782" TEXT="Third Ideal: Improvement of Daily Work"/>
+<node CREATED="1575783316011" ID="ID_1410444116" MODIFIED="1575783325231" TEXT="Fourth Ideal: Psychological Safety"/>
+<node CREATED="1575783325940" ID="ID_1415610535" MODIFIED="1575783332574" TEXT="Fifth Ideal: Customer Focus"/>
+</node>
+</node>
+</node>
+</node>
+</map>

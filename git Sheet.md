@@ -16,3 +16,12 @@ Falls du ein entferntes Repository verwendest, benutze:
 
     git clone https://github.com/reebear63/Technologies.git Technologies
 
+
+**git pull - **
+
+**git add <filename>**
+
+**git commit -m "<some comment>" **
+
+**git push origin master**
+
