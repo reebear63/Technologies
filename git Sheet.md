@@ -1,6 +1,7 @@
 # My Git Sheet #
 
 https://rogerdudler.github.io/git-guide/index.de.html
+Bernd Öggl & Michael Kofler: Git, Rheinwerk Verlag 2020
 
 **git init   - create an empty git repository or reinitialize an existing one**
 - create a new directory
