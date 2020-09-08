@@ -275,7 +275,7 @@ Q: In an agile pre-mortem retrospective the team tries to anticipate
 * what has gone wrong.
 * what will definitely go wrong.
 * what could go wrong. (wrong)
-* waht is wrong.
+* what is wrong.
 
 Q: Sanika is confused about the purpose of a product roadmap. She asks you, her project manager, to identify a benefit of a product roadmap to help her understand a product roadmap's purpose. Select the benefit of a product roadmap.
 * Helps facilitate iteration development. (wrong)
@@ -284,9 +284,15 @@ Q: Sanika is confused about the purpose of a product roadmap. She asks you, her 
 * Helps facilitate daily stand-up meetings.
 
 Q: When is it appropriate to estimate tasks for an iteration?
-* Both during sprint planning and during the sprint itself.
+* Both during sprint planning and during the sprint itself. (most likely correct)
 * Only during release planning.
 * During the sprint.
 * During sprint planning. (wrong)
+
+=======================================
+
+**Premortem Retrospective**
+Image a failure!
+Imagine all the reasons your project could turn into a miserable failure. Then figure out how you can prevent those problems now, while there's still time.
 
 =======================================

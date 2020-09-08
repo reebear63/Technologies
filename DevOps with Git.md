@@ -104,3 +104,85 @@ updates the remote repository with any commits made locally to a branch.
 Merge requests allow you to visualize and collaborate on the proposed changes to source code that exist as commits on a given Git branch.
 
 ## GitLab ##
+GitLab provides a complete CI/CD tool chain in a single application. It provides one interface, one conversation, one permission model.
+
+**What is the difference between git and GitLab**
+* Git is a free and open-source version control system designed to handle everything from small to very large projects with speed and efficiency.
+* GitLab is a open-source self-hosted Git management software
+* GitLab offers git repository management, code reviews, issue tracking, activity feeds and wikis
+
+**What are the features of GitLab?**
+GitLab is a complete DevOps platform, delivered as a single application. It provides features which are fundamentally changing the way Development, Security, and Ops teams collaborate and build software. From idea to production, GitLab helps teams improve cycle times from weeks to minutes, reduce development costs and time to marked while increasing developer productivity.
+
+## Git Repositories ##
+Repositories are critical for code organization and access control.
+
+**Conceptual or functionality group per repository**
+This could be named per product, per program, or per library. Dividing code or artefacts at a later stage is difficult and might lead to rewriting of the public history or missing history. Structuring the repository or related repositories at an early stage is important. 
+The repository name should be unique to your account. Choose a descriptive name based on the product or project. Check Copyright and trademarks to ensure proper naming. As far as naming conventions, separate words with - (hyphen, dash), since typing a hyphen is easier than typing _ (underscore).
+
+**Read and Write access control is at the repository level**
+A user has access to the entire repository - that means all branches, the complete history. For fine grained access, compartmentalize read/write access by structuring the code base into different repositories.
+
+**Shared files required by multiple projects into a separate repository**
+A shared repository promotes code reuse and is highly recommended.
+
+**Avoid repositories for large binary files**
+Git sync activities become challenging for large binary files. Cloning and branching operations become slow for large repositories. Use Artifactory for storing binary files.
+
+## Git Branching ##
+Branching is one of the most powerful features. Branches are the perfect tool to differentiate separate lines of development. Project teams should use feature branching extensively in the development workflow: for new features, for bug fixes.
+
+A Git repository comprises of two key types of branches
+1. The master branch at origin should be familiar to every Git user
+2. origin/master should be the main branch where the source code of HEAD always reflects a production-ready state
+
+The project/product team can have additional types of branches.
+
+- Feature Branches
+  * Feature branches are used to develop new features for the upcoming or a distant future release
+  * they are merged and deleted after merge to the development branch or release branch
+  
+- Release Branches
+  * Release branches support preparation of a new production release
+  
+- Hotfix Branches
+  * hotfix branches are like release branches for a new production release
+  * they arise from the necessity to act immediately upon an undesired state of a live production version
+  * a hotfix branch may be branched off from the corresponding tag on the master branch that marks the production version
+
+**Feature branch naming**
+Use a consistent naming convention for your feature branches to identify the work done in the branch
+
+## Git commits ##
+
+**Commit related changes**
+- small commits make it easier for reviewers and other developers to understand the changes and roll them back in case something goes wrong
+- for example, fixing two different bugs should have two separate commits
+- a commit should comprise of related changes only
+
+**Author**
+- Git commits should be performed by a recognized author with valud organization email id only
+- Unrecognized authors makes it difficult to track the author for the specific code commits
+- Ensure Git client is configured with the correct email address and linked to the GitLab user login name
+
+**Comment**
+1. Git commit comments should have a reference to User story, Task, Bug fix, Feature ID
+2. use the specific reference to the tracker ID in the comments, such as Bug #634377
+3. Commit messages should reflect the user's intention and not just the contents of the commit
+4. Commit messages should explain the reason for the changes
+5. An example for a good commit message is: "combine templates to reduce duplicate code in the user views"
+6. The words "change", "improve", "fix", and "refactor" do not add much information to a commit message
+7. For example, "Improve XML generation" could be better written as "Bug #634377: properly escape special characters in XML generation"
+8. For more information about formatting commit messages, please see this excellent blog post by Tim Pope.
+    https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html
+
+
+## Git feature commits ##
+Each feature should reside in its own branch, which can be pushed to the remote repository for backup/collaboration.
+
+* Do not use branching off from master, feature branches should use development as their parent branch
+* on completion of the feature, it should be merged into development
+* Features should never interact directly with the master branch
+
+
