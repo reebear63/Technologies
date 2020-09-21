@@ -190,11 +190,230 @@ selection data type, unordered, mutable, no duplicate elements
 ordered and immutable data type used for text representation
 -- insert Strings section from Python 101 here --
 
-## 06. Collections ##
+    my_string = """Hello \
+    World"""                    # continue in new line, but do not insert CR-LF
 
+    my_string = "Hello World"
+    substring = my_string[::2]  # takes only every second character
+    substring = my_string[::-1] # reverts the string
+    print (substring)
+
+    greeting = "Hello"
+    name = "Tom"
+    if 'el' in greeting: 
+        print("yes")
+
+    my_string = "Hello World"
+    print (my_string.endswith("ld"))
+    print (my_string.find('pp'))
+    print (my_string.replace('World', 'Universe'))
+
+    my_string = 'How are you doing'
+    my_list = my_string.split()     # default delimiter is space
+    my_list = my_string.split(",")
+    print(my_list)          
+
+    new_string = ''.join(my_list)
+    print (new_string)
+
+    my_list = ['a'] * 6
+    print(my_list)
+
+    # bad 
+    my_string = ''
+    for i in my_list:
+        my_string += i              # since strings are immutable, this will always create new strings
+    print(my_string)
+
+    # good
+    my_string = ''.join(my_list)
+    print(my_string)
+
+## 06. Collections ##
+collections: Counter, namedtuple, OrderedDict, defaultdict, deque
+
+    from collections import Counter
+    a = "aaaaabbbbccc"
+    my_counter = Counter(a)
+    print(my_counter)
+
+    Counter({'a': 5, 'b': 4, 'c': 3})
+
+    my_counter.items()                  # all key-value pairs
+    my_counter.keys()                   #
+    my_counter.values()                 #  dicr_values([5, 4, 3])
+
+    print(my_counter.most_common(1))    # print most common element as a list of tuples: [('a', 5)]
+    print(my_counter.most_common(2))    # [('a', 5), ('b', 4)]
+    #----------------------------------
+
+    from collections import namedtuple
+    Point = namedtuple('Point', 'x,y')
+    pt = Point(1, -4)
+    print(pt)
+
+    >>Point(x=1, y=-4)
+
+    print(pt.x, pt.y)
+    #----------------------------------
+
+    from collection import OrderedDict  # not necessary anymore since Python 3.7
+    ordered_dict = OrderedDict()
+    ordered_dict['a'] = 1
+    ordered_dict['b'] = 2
+    ordered_dict['c'] = 3
+    ordered_dict['d'] = 4
+    #----------------------------------
+    
+    from collections import defaultdict # dictionary will have a default value
+    d = defaultdict(int)    # using a normal dictionary, it will raise a key error
+    d['a'] = 1
+    d['b'] = 2
+    print(d['b'])
+    print(d['c'])           # default value of int is 0
+
+    #----------------------------------
+    # deque = double-ended queue
+    from collections import deque
+    d = deque()
+    d.append(1)
+    d.append(2)
+    print(d)
+    d.appendleft(3)
+    print(d)                    # deque([3, 1, 2])
+    d.pop()
+    d.popleft()
+    d.clear()
+    d.extend([4, 5, 6])
+    d.extendleft([4, 5, 6])     #  deque([6, 5, 4, 3, 1, 2])  
+        
 ## 07. Itertools ##
+itertools: product, permutations, combinations, accumulate, groupby, infinite iterators
+
+    from itertools import product
+    a = [1, 2]
+    b = [3, 4]
+    prod = product(a,b)
+    print (list(prod))          # [(1, 3), (1, 4), (2, 3), (2, 4)]
+    
+    prod = product(a, b, repeat=2)
+    #----------------------------------
+
+    from itertools import permutations
+    # will return all possible orderings
+    perm = permutations(a, 2)   # max. length of orderings
+    #----------------------------------
+
+    from itertools import combinations
+    # will create all possible combinations with a specified length
+    a = [1, 2, 3, 4]
+    comb = combinations(a, 2)   # no combinations of the same argument, no repetition
+    print(list(comb))           # [(1, 2), (1, 3), (1, 4), (2, 3), (2, 4), (3, 4)]  
+
+    from itertools import combinations_with_replacement
+    #----------------------------------
+
+    from itertools import accumulate
+    a = [1, 2, 3, 4]
+    acc = accumulate(a)         # by default, create the sums
+
+    from itertools import accumulate
+    import operator
+    a = [1, 2, 3, 4]
+    acc = accumulate(a, func=operator.mul)
+
+    from itertools import accumulate
+    import operator
+    a = [1, 2, 5, 3, 4]
+    acc = accumulate(a, func=max)
+    print(a)                    # [1, 2, 5, 3, 4]
+    print(list(acc))            # [1, 2, 5, 5, 5]
+
+    #----------------------------------
+    from itertools import groupby
+
+    def smaller_than_3(x):
+        return x < 3
+
+    a = [1, 2, 3, 4]
+    group_obj = groupby(a, key=smaller_than_3)
+    for key, value in group_obj         # True  [1, 2]
+        print(key, list(value))         # False [3, 4]
+    #----------------------------------
+    from itertools import groupby
+    a = [1, 2, 3, 4]
+    group_obj = groupby(a, key=lambda x: x<3)
+    for key, value in group_obj:
+        print(key, list(value))
+    #----------------------------------
+    from itertools import groupby
+
+    persons = [{'name': 'Tim', 'age': 25}, {'name': 'Dan', 'age': 25}, {'name': 'Lisa', 'age': 27}, {'name': 'Claire', 'age': 28}]
+    group_obj = groupby(persons, key=lambda x: x['age'])
+    for key, value in group_obj:
+        print(key, list(value))
+
+    OUTPUT
+    25 [{'name': 'Tim', 'age': 25}, {'name': 'Dan', 'age': 25}]
+    27 [{'name': 'Lisa', 'age': 27}]
+    28 [{'name': 'Claire', 'age': 28}]
+    #----------------------------------
+    from itertools import count, cycle, repeat
+
+    for i in count(10):
+        print(i)            # will start infinite count from 10
+
+    a = [1, 2, 3]
+    for i in cycle(a):
+        print(i)            # cycle indefinitely through a
+
+    a = [1, 2, 3]
+    for i in repeat(1):
+        print(i)
+
+    for i in repeat(1, 4):
+        print(i)            # repeat over 1 - 4 times
 
 ## 08. Lambda Functions ##
+lambdas are small, one-line functions with parameter(s)
+
+    lambda arguments: expression
+
+    add10 = lambda x: x+10
+    print(add10(5))
+
+    mult = lambda x,y: x*y
+    #----------------------------------
+    points2D = [(1, 2), (15, 1), (5, -1), (10, 4)]
+    points2D_sortedX = sorted(points2D)
+    points2D_sortedY = sorted(points2D, key=lambda x: x[1])
+
+    print(points2D)
+    print(points2D_sortedX)         # sorted by x value
+    print(points2D_sortedY)         # sorted by y value
+    #----------------------------------
+    # map(func, seq)
+    a = [1, 2, 3, 4, 5]
+    b = map(lambda x: x*2, a)
+    print(list(b))                  # each element got multiplied by 2
+
+    c = [x*2 for x in a]            # list comprehension
+    print(c)
+    #----------------------------------
+    # filter(func, seq)
+    a = [1, 2, 3, 4, 5, 6]
+    b = filter(lambda x: x%2==0, a)
+    print(list(b))                  # only get the even numbers
+
+    c = [x for x in a if x%2==0]    # list comprehension
+    print(c)
+    #----------------------------------
+    # reduce(func, seq)
+    from functools import reduce
+    a = [1, 2, 3, 4]
+    product_a = reduce(lambda x,y: x*y, a)
+    print(product_a)                # result: 24
+
 
 ## 09. Exceptions and Errors ##
 
